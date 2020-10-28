@@ -6,7 +6,7 @@ const routes = [
   {
       path: '/todo-list',
       models: () => [import('./models/todoList.js')], //models可多个
-      component: () => import('./pages/TodoList.js'),
+      component: () => import('./pages/TodoList/index.js'),
   }, 
 ];
  
