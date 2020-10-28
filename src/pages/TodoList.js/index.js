@@ -4,7 +4,9 @@ import Input from 'antd/lib/input';
 import { List } from 'antd/lib/form/Form';
 import { connect } from 'dva';
 
-@connect(() => ({}))
+@connect(({ todoList }) => ({
+  inputValue: todoList.inputValue
+}))
 class TodoList extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ class TodoList extends Component {
       <div style={{ margin: 10 }}>
         <div>
           <Input
-            placeholder='Write something...'
+            placeholder={this.props.inputValue}
             style={{ width: 300, marginRight: 10 }}
             // onChange={handleValueChange}
             // onPressEnter={handleAdd}

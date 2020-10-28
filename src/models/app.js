@@ -1,13 +1,13 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  namespace: 'todoList',
+  namespace: 'app',
   state: {
-    inputValue: 'liujianlishuaiaaa'
+    name:'这是app的model'
   },
 
   effects: {
-
+    
   },
 
   reducers: {}
-}
+};
