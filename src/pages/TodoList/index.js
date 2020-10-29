@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Input, List } from 'antd'
 import { connect } from 'dva';
+import { Link } from 'dva/router';
 
 @connect(({ todoList }) => ({
   inputValue: todoList.inputValue,
@@ -83,6 +84,11 @@ class TodoList extends Component {
               </List.Item>
             }
           />
+        </div>
+        <div style={{ marginTop: 15 }}>
+          <Link to="/count">
+            <Button>To Count</Button>
+          </Link>
         </div>
       </div>
      );

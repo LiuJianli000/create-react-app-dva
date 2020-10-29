@@ -1,14 +1,7 @@
 import React from 'react';
 import { Router, Route, Switch, Redirect } from 'dva/router';
 import dynamic from 'dva/dynamic'
- 
-const routes = [
-  {
-      path: '/todo-list',
-      models: () => [import('./models/todoList.js')], //models可多个
-      component: () => import('./pages/TodoList/index.js'),
-  }, 
-];
+import routes from './routes'
  
 function RouterConfig({ history, app }) {
  
@@ -17,7 +10,7 @@ function RouterConfig({ history, app }) {
       <Switch>
         <Route path="/" exact render={() => (<Redirect to="/todo-list" />)} />
         {
-          routes.map(({path,...dynamics},index)=>(
+          routes.map(({ path, ...dynamics }, index)=>(
             <Route
               key={index} 
               path={path} 
