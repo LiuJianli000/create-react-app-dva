@@ -1,3 +1,7 @@
+#### 脚手架
+
+`create-react-app`
+
 #### 使用 scss
 
 `yarn add node-sass`
